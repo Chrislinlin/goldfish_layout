@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>表格怎麼切</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            html, body{
+                height: 100%;
+            }
+            body{
+                display: flex;
+                align-items: center;
+            }
+            .table{
+                width: 800px;
+                margin: auto;
+            }
+            .table table{
+                width: 100%;
+                border: 3px double black;
+            }
+            .table tr{}
+            .table th{
+                border: 1px solid #666;
+                padding: 6px 10px;
+            }
+            .table td{
+                border: 1px solid #666;
+                padding: 6px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">敬啟期待</th>
+                        <th scope="col">敬啟期待</th>
+                        <th scope="col">敬啟期待</th>
+                        <th scope="col">敬啟期待</th>
+                        <th scope="col">敬啟期待</th>
+                        <th scope="col">敬啟期待</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>敬啟期待</td>
+                        <td>敬啟期待</td>
+                        <td>敬啟期待</td>
+                        <td>敬啟期待</td>
+                        <td>敬啟期待</td>
+                        <td>敬啟期待</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>備註</td>
+                        <!--跨五格用法-->
+                        <td colspan="5">敬啟期待</td>
+                        
+                    </tr>
+                </tfoot>
+                
+            </table>
+            
+        </div>
+        
+    </body>
+</html>
+

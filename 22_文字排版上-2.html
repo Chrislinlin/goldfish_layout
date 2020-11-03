@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>文字排版-2</title>
+        <style>
+            
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .container{
+                width: 1200px;
+                margin: auto;
+                padding: 100px 0;
+                
+            }
+            .container h2{
+                width: 400px;
+                text-align: right;
+                margin-right:.5em ;
+                padding: 20px 15px 0;
+                font-size: 42px;
+                float: left;/*文繞圖子層float父層不用flex，而且使用column就不會有文繞也要記得拿掉*/
+                border-right:5px solid #000 ;
+            }
+            .container .txt{
+                
+                box-sizing: border-box;
+                padding: 0 15px;
+            }
+
+        </style>
+        <div class="wrap">
+            <div class="container">
+                    <h2>Chris is a good kid</h2>
+                    <div class="txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis expedita molestiae porro, eveniet repellendus explicabo earum quis nam officiis neque deleniti quidem nobis error minus reiciendis minima nihil quos.</p> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, voluptate. Nihil quia suscipit tempore fuga maiores esse eaque voluptas deserunt asperiores accusamus veritatis explicabo hic, ipsa, facilis veniam rem quasi.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, voluptate. Nihil quia suscipit tempore fuga maiores esse eaque voluptas deserunt asperiores accusamus veritatis explicabo hic, ipsa, facilis veniam rem quasi.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </head>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>人物介紹卡片</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            html, body{
+                /*不然height:100%沒有效果*/
+                height: 100%;
+            }
+            body{
+                display: flex;
+                align-content: center;
+                background-color: grey;
+            }
+            .wrap{
+                width: 1200px;
+                display: flex;
+                margin: auto;
+                
+            }
+            .item{
+                width: 378px;
+                
+                text-align: center;
+                background-color: #fff;
+                margin: 10px;
+                border:1px solid black
+            }
+            .item_txt{
+                padding: 10px;
+                position: relative;
+            }
+            .item_txt:before{
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-top:50px solid transparent;
+                border-left: 189px solid white;
+                border-right: 189px solid #fff;
+                transform: translateY(-100%);
+                
+
+            }
+            .item:hover{
+                transform:translateY(-30px)
+            }
+            .item:hover .item_txt:before{
+                
+                border-left: 189px solid yellow;
+                border-right: 189px solid yellow;
+            }
+            .item:hover .item_txt{
+                background-image: linear-gradient(0deg, red,yellow);
+            }
+            .item img{
+                width: 100%;
+            }
+
+            .item_txt h1{
+                border-bottom: 1px solid #888;
+                padding-bottom: .3em;
+                margin-bottom: .4em;                
+                font-weight: 900;
+                transition: .25s;
+            }
+            .item_txt p{
+                line-height: 1.5;
+                transition: .25s;
+            }
+            .item:hover h1{
+                color: #fff;
+            }
+            .item:hover p{
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="item">
+                <img src="https://picsum.photos/300/300?random m=10">
+                <div class="item_txt">
+                    <h1>克里斯</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta id laborum vel sunt inventore sit maiores, nemo cupiditate quod rerum, blanditiis minus fuga consequuntur provident ex et laboriosam aliquid earum.</p>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/300?random m=20">
+                <div class="item_txt">
+                    <h1>ChrisLin</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta id laborum vel sunt inventore sit maiores, nemo cupiditate quod rerum, blanditiis minus fuga consequuntur provident ex et laboriosam aliquid earum.</p>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/300?random m=80">
+                <div class="item_txt">
+                    <h1>林庭羽</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta id laborum vel sunt inventore sit maiores, nemo cupiditate quod rerum, blanditiis minus fuga consequuntur provident ex et laboriosam aliquid earum.</p>
+                </div>
+
+            </div>
+        </div>
+        
+    </body>
+</html>

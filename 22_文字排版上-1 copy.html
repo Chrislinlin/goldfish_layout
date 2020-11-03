@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>文字排版</title>
+        <style>
+            
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .container{
+                width: 100%;
+                display: flex;
+                width: 1200px;
+                margin: auto;
+                padding: 100px 0;
+            }
+            .container .txt{
+                width: 800px;
+                column-count:3;
+                column-gap:20px;
+                padding: 0 20px;
+            }
+            .container h2{
+                width: 400px;
+                text-align: right;
+                box-sizing: border-box;
+                padding: 20px 15px 0;/*上釉下左*/
+                background-color: #ad1;
+                
+            }
+            .container h2::after{
+                content: '';
+                display: block;
+                width: 4em;
+                height: 4px;
+                background-color: #000;
+                
+                margin-left: auto;
+            }
+
+
+        </style>
+        <div class="wrap">
+            <div class="container">
+                    <h2>Chris is a good kid</h2>
+                    <div class="txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis expedita molestiae porro, eveniet repellendus explicabo earum quis nam officiis neque deleniti quidem nobis error minus reiciendis minima nihil quos.</p> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, voluptate. Nihil quia suscipit tempore fuga maiores esse eaque voluptas deserunt asperiores accusamus veritatis explicabo hic, ipsa, facilis veniam rem quasi.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, voluptate. Nihil quia suscipit tempore fuga maiores esse eaque voluptas deserunt asperiores accusamus veritatis explicabo hic, ipsa, facilis veniam rem quasi.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </head>
+</html>

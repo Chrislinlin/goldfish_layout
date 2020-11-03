@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>24_文字排版</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .wrap{
+                margin-top: 100px;
+            }
+            .container{
+                width: 1200px;
+                position: relative;
+                margin:auto;
+                display: flex;
+            }
+            .container h1{
+                width: 200px;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                padding-left: 15px;
+                font-size: 70px;
+                bottom: 0;
+                order:1;
+                
+                color: #aaa;
+                position: relative;
+                
+            }
+            .container h1::before{
+                content:'';
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border:20px solid #f1b444;
+                transform:rotate(10deg)
+            }
+            .container h1::after{
+                content:'';
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                border:20px solid #f1c555;
+                transform:rotate(20deg)
+            }
+            .container .txt{
+                width: 800px;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                column-count: 2;
+                column-gap:20px;
+                
+                padding: 20px;
+                box-shadow: 0px 0px 25px #eee;
+            }
+            .container .txt p{
+                margin-bottom: 1em;
+            }
+            .container .txt p:first-child::first-letter{
+                font-size: 60px;
+                float: left;
+                padding-right: 10px;
+            }
+
+        </style>
+        
+
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="container">
+                <h1>Chrislin is really awesome</h1>
+                <div class="txt">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

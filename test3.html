@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .wrap{
+                padding: 150px 0 0;
+                background: linear-gradient(135deg, #dff, #a55);
+
+            }
+            .wrap .container{
+                display: flex;
+                width: 1200px;
+                margin: auto;
+            }
+            .item{
+                width: 0;
+                flex-grow: 1;
+                margin: 20px;
+            }
+
+            .item h4{
+                border-bottom: 2px solid #fff;
+                padding-bottom: 5px;
+                margin-bottom: .4em;
+                font-size: 24px;
+            }
+            .item nav{
+                display: flex;
+                flex-direction: column;
+            }
+            .item nav a{
+                text-decoration: none;
+                color: white;
+                line-height: 1.4;
+                padding: 5px 0;
+            }
+            .item_subs{
+                display: flex;
+                flex-direction: column;
+            }
+            .item_subs form{
+                display: flex;
+                width: 100%;
+                margin:auto 0px;
+            } 
+            .item_subs input[type="text"],.item_subs input[type="submit"]{
+                border: none;
+                padding: 5px 10px;
+            }
+            .item_subs input[type="text"]{
+                width: 0;
+                flex-grow: 1;
+            }
+            .item_subs input[type="submit"]{
+                color: #fff;
+                background-color: #f50;
+            }
+            .copyright{
+                text-align: center;
+                margin: 150px 0 0;
+                width: 100%;
+                padding: 10px 0;
+                background-color: #aaa;
+            }
+
+        </style>
+        <body>
+            <div class="wrap">
+                <div class="container">
+                    <div class="item">
+                        <h4>關於暴力課程</h4>
+                        <nav>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                        </nav>
+                        
+                    </div>
+                    <div class="item">
+                        <h4>關於暴力課程</h4>
+                        <nav>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                        </nav>
+                        
+                    </div>
+                    <div class="item">
+                        <h4>關於暴力課程</h4>
+                        <nav>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                            <a href="#">課程內容</a>
+                        </nav>
+                        
+                    </div>
+                    <div class="item item_subs">
+                        <h4>訂閱電子報</h4>
+                        <form>
+                            <input type="text" name="">
+                            <input type="submit" value="訂閱">
+                        </form>
+                        
+                    </div>
+    
+                        
+                    
+                </div>
+                <div class="copyright">
+                    Copyright &copy;2019
+                </div>
+            </div>
+            
+        </body>
+    </head>
+</html>

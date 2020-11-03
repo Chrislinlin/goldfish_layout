@@ -1,0 +1,105 @@
+if(執行條件){要是前面為true則執行大括號內的程式代碼}
+小括號（）裡是判斷條件是否為真
+
+要是if 條件不成立，則可以寫if(...)else(...){}
+要是有多個條件需要判斷則可以寫if(...)else if(...) else(...) else{}
+
+var score =80;
+if(score>60){
+    document.write("你及格了");
+}
+//你及格了！
+
+ex.
+var old = 27
+document.write("how old am I?")
+if(old>30){
+    alert("too big");
+}else if(old<20){
+    alert("too small");
+}else
+    alert("im 27 years old.");
+
+圖中可以設定多個else if，結果不一定是要else.
+
+條件運算子？
+當判斷條件單純且沒有多行條件判斷時可以使用。
+condition? value_a :value_b
+判斷條件是否為真，要是為真則返回value_a，否則則返回value_b;
+ex. 
+var act_inventory = 100;
+var count = act_inventory<50? "庫存不夠"："庫存足夠";
+
+switch
+
+語法
+switch(value){
+    case value1: //冒號很重要，很像if(value==value1，則執行statement1)
+    statement1;
+    break;
+    case value2: 
+    statement2;
+    break;
+    case value3: 
+    statement3;
+    break;
+    default:
+    statement4//很像else，要是上述case都不成立，則執行statement4>
+
+}
+ex.
+var porker_suits= "spade";
+switch(porker_suits){
+    case "sprade":{
+        document.write("that's right the suits is spade");
+        break;
+    }case "heart":{
+        document.write("the suits is heart");
+        break;
+    }case "diamond":{
+        document.write("the suits is diamond");
+        break;
+    }default:
+    document.write("the suits is diamond");
+        
+}
+
+印出1 ~ 10
+for( var i=1;i<=10;i++){
+    document.write(i+'、');
+}
+var person = "chrislinlin";
+var obja = new String("Chirslinlin");
+var objb = new String("Chrislinlin");
+document.write((obja ==objb)//比較結果為false，因為是使用傳址兩個不同的記憶體地址就算內容相同，答案也不同
+document.write((person==obja)); //比較結果為true，因為person是原始字串變數，若比較者中有一個是字串資料型態就是用傳值比較，內容同，答案也同。
+
+function show(a,b）{
+    console.log(a,b);
+}
+show(5,3)
+//a,b是參數
+//5,3是引數
+
+function abc(){
+    console.log(this);
+}
+/此時this代表了window
+
+function abc(){
+    this.count++
+}
+abc.count =0;
+abc();
+console.log(abc.count);
+//明明已經宣告abc.count = 0了，為何跑出來不是1呢？？因為abc是在全域環境被呼叫，所以this不是你所想的abc，啊到底是誰count++了－》是windows的啊，我們一開始賦予window一個count屬性，，並沒有給定初始值。所以要是打印出的結果會是undefined+1= NaN
+
+var obj = {
+    funA:function(){
+        console.log(this);
+        console.log(this===obj);
+    }
+}
+obj.funA();
+//{funA: ƒ}
+//true

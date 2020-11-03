@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>交錯排列版</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            body{
+                padding: 100px 0;
+                /*背景漸層固定在x軸＆y軸中間 寬 高100%*/
+                background:linear-gradient(20deg, red, blue)fixed center center/ 100% 100%
+
+            }
+            .wrap{
+                width: 1200px;
+                margin: auto;
+            }
+            .item{
+                display: flex;
+                align-items: center;
+                margin-bottom: 70px;
+                
+            }
+            .item .pic{
+                width: 55%;
+                /*讓畫面突出去了*收縮值為0*/
+                 flex-shrink: 0;
+            }
+            /*讓圖片沒有空白＋下面沒有距離*/
+            .item .pic img{
+                width: 100%;
+                vertical-align: middle;;
+            }
+            .item .txt{
+                width: 55%;
+                /*讓畫面突出去了*收縮值為0*/
+                flex-shrink: 0;
+                padding: 50px 30px;
+                /*border-box看你整個容器是多少最後就是多少所以不會超出去*/
+                box-sizing: border-box;
+                /*讓文字可以拉到上方來*/
+                position: relative;
+                z-index: 1;
+            }
+            .item .txt h2{
+                font-weight: 900;
+            }
+
+            /*item 裡面的第一個物件*/
+            .item >:first-child{
+                margin-right: -10%;
+            }
+            .item:nth-child(1) .txt{
+                background-color: rgba(153, 152, 150);
+            }
+            .item:nth-child(2) .txt{
+                background-color: rgb(175, 190, 108);
+            }
+            .item:nth-child(3) .txt{
+                background-color: rgb(105, 62, 5);
+            }
+            .item:nth-child(4) .txt{
+                background-color: rgb(175, 144, 136);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <!--item1-->
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/600/350?random m=10">
+                </div>
+                
+                <div class="txt">
+                    <h2>金魚都會切</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius dolorem eos a quaerat. Eum labore aliquam recusandae minima reiciendis magnam quibusdam! Non at saepe doloribus iusto sapiente voluptatibus totam amet.</p>
+                </div>
+            </div>
+            <!--item2-->
+            <div class="item">
+                <div class="txt">
+                    <h2>金魚都會切</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius dolorem eos a quaerat. Eum labore aliquam recusandae minima reiciendis magnam quibusdam! Non at saepe doloribus iusto sapiente voluptatibus totam amet.</p>
+                </div>
+                <div class="pic">
+                    <img src="https://picsum.photos/600/350?random m=11">
+                </div>
+            </div>
+            <!--item3-->
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/600/350?random m=12">
+                </div>
+                <div class="txt">
+                    <h2>金魚都會切</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius dolorem eos a quaerat. Eum labore aliquam recusandae minima reiciendis magnam quibusdam! Non at saepe doloribus iusto sapiente voluptatibus totam amet.</p>
+                </div>
+            </div>
+            <!--item4-->
+            <div class="item">
+                <div class="txt">
+                    <h2>金魚都會切</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius dolorem eos a quaerat. Eum labore aliquam recusandae minima reiciendis magnam quibusdam! Non at saepe doloribus iusto sapiente voluptatibus totam amet.</p>
+                </div>
+                <div class="pic">
+                    <img src="https://picsum.photos/600/350?random m=13">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

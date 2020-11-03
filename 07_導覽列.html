@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>導覽列</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                font-family: "Fira Code";
+            }
+            .main_header{
+                background: linear-gradient(30deg, blue, gray);
+            }
+            .main_header .container{
+                display: flex;
+                padding: 20px;
+                margin: auto;
+                max-width: 1200px;
+                
+                align-items: center;
+            }
+            .main_header .logo{
+                width: 100px;
+            }
+            .main_header .logo img{
+                width: 100%;
+                vertical-align: middle;
+            }
+            .main_header .main_nav{
+                margin: auto;
+                display: flex;
+            }
+            .main_header .main_nav a{
+                color: white;
+                text-decoration: none;
+                padding: 5px 1em;
+                position: relative;
+                transform: translateY(0px);
+                
+            }
+            .main_header .header_search input,
+            .main_header .header_search button{
+                border: none;
+                background-color: #ccc;
+                padding:5px 10px;
+                
+            }
+            /*超連結摸到會左右長大，必須要是獨立物件 可用after*/
+            .main_header .main_nav a:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: -5px;
+                border-bottom: 1px solid white;
+                height: 0;
+                transition: .3s;
+                
+                
+                
+            }
+            .main_header .main_nav a:hover:after{
+                left: 0;
+                right: 0;
+                transform: translateY(-10px)
+
+            }
+
+            /*點進去搜尋列不會有反應*/
+            .main_header .header_search input:focus,
+            .main_header .header_search button:focus{outline: none;
+                
+            }
+            .main_header .header_search button{
+                border-radius: 0 200px 200px 0;
+            }
+            .main_header .header_search input{
+                border-radius: 200px 0 0 200px;            
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header class="main_header">
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src ="starbucks.jpg" alt="星巴克">
+                </a>
+                <nav class="main_nav">
+
+                        <a href="#">克里斯都懂</a>
+                        <a href="#">暴力克里斯</a>
+                        <a href="#">克里斯系列</a>
+                        <a href="#">原來是克里斯</a>
+
+                </nav>
+                <form class="header_search">
+                    <input type="search" name="" id="">
+                    <button>放大鏡</button>
+
+                </form>
+            </div>
+        </header>
+    </body>
+</html>

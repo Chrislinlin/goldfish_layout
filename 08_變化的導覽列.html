@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>變化的導覽列</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .main-header{
+                width: 100%;
+                height: 100vh;
+                background-color: violet;
+            }
+            .main-header .container{
+                display: flex;
+                margin: auto;
+                align-content: center;
+                padding: 10px;
+                background:linear-gradient(0deg, gray, yellow);
+            }
+            .main-header .nav{
+                margin: auto;
+                
+                
+                
+            }
+            .main-header .nav img{
+                width: 100%;
+                vertical-align: middle;
+                
+            }
+            .main-header .nav a{
+                position: relative;
+                text-decoration: none;
+                color: white;
+                
+                padding: 10px 1em;
+                
+            }
+            .main-header .nav a:after{
+                content: '';
+                left: 50%;
+                right: 50%;
+                height: 0;
+                bottom: -5px;
+                border-bottom: 1px solid white;
+                height: 0;
+                position: absolute;
+                transition: 0.3s;
+            }
+            .main-header .nav a:hover:after{
+                left: 0;
+                right: 0;
+                
+                
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="main-header">
+            <div class="container">
+                <a href="#">
+                    <img src ="starbucks.jpg" alt="星巴克">
+                </a>
+                <nav class="nav">
+                    <a href="#">標題一</a>
+                    <a href="#">標題二</a>
+                    <a href="#">標題三</a>
+                    <a href="#">標題四</a>
+                </nav>
+                
+            </div>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>

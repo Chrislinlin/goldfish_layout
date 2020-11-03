@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>碰到圖有漸層有文字</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .wrap{
+                width: 100%;
+                display:flex;
+                
+            }
+            /*父層被摸到子層做事情＋子層class也是txt*/
+
+            .item:hover .txt{
+                opacity: 1;
+            }
+            .item{
+                width: 25%;
+                position: relative;
+            }
+            .item img{
+                width: 100%;
+                vertical-align: middle;
+                
+            }
+            .item .txt{
+                /*因為要覆蓋在父層上，子層要絕對定位*/
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding: 20px;
+                background-color: rgba(0,0,0,.3);
+                justify-content: center;
+                 /*主軸的方向*/
+                flex-direction: column;
+                /*透明度*/
+                opacity: 0;
+            }
+            .item h1{
+                font-size: 28px;
+                color: goldenrod;
+                font-weight: 500;
+            }
+            .item h1:after{
+                content: '';
+                display: block;
+                height: 2px;
+                width: 0%;
+                margin: 10px 0;
+                background-color:greenyellow;
+                
+            }
+            .item:hover h1:after{
+                transition: .5s .3s; 
+                width: 100%;
+            }
+
+            .item p{
+                font-size: 18px;
+                color: honeydew;
+                font-weight: 100;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="item">
+                <img src="https://picsum.photos/500/400?random m=10">
+                <div class="txt">
+                    <h1>金魚都能懂：互動圖文卡片</h1>
+                        <p>
+                            互動圖文卡片是我們網頁中另一稀飯版，不會切你就GG囉
+                        </p>
+                    </div>
+                    
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/500/400?random m=9">
+                <div class="txt">
+                    <h1>不知道有沒有聽過都市傳說，絕不要相信沒有驗證過的</h1>
+                        <p>
+                            傳說有很多有一種就是而子是絕對爸爸就是相對阿你絕對就G囉
+                        </p>
+                    </div>
+                    
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/500/400?random m=8">
+                <div class="txt">
+                    <h1>稀飯版都不會是要怎麼轉職</h1>
+                        <p>
+                            把技能學會就是一點痛一點爽的前進囉
+                        </p>
+                    </div>
+                    
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/500/400?random m=7">
+                <div class="txt">
+                    <h1>買線上課程先想想先把免費的金魚練一下</h1>
+                        <p>
+                            買了也不會看那還不如來看免錢的反正也不會看
+                        </p>
+                    </div>
+                    
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>時間軸</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            body{
+                background-color: #edece1;
+            }
+            .wrap{
+                width: 960px;
+                margin: auto;
+            }
+            .wrap:after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 0px;
+                
+                clear: both;
+            }
+            .timeline{
+                padding: 100px 0 200px;
+            }
+            .timeline li::before{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                /*垂直擲中*/
+                top:0;
+                bottom:0;
+                margin: auto;
+                border-radius: 50%;
+                background-color: #aaa;
+                z-index: 2;
+            }
+
+            .timeline li:nth-child(odd)::before{
+                right:-10px;
+            }
+            .timeline li:nth-child(even)::before{
+                left:-10px;
+            }
+            .timeline li{
+                width: 50%;
+                box-sizing: border-box;/*添加padding那些都沒有什麼問題*/
+                padding: 20px 0;
+                position: relative;
+            }
+            .timeline li:nth-child(odd){
+                float: left;
+                padding-right: 100px;
+            }
+            .timeline li:nth-child(even){
+                float: right;
+                padding-left: 100px;
+                transform: translateY(50%);
+            }
+            
+            .timeline li:nth-child(odd)::after{
+                right: 0;
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background-color: #ccc;  
+                top:0;
+                z-index: -1;
+
+
+            }
+            
+            .timeline li:last-child::after{
+                height: 50%;
+            }
+            
+            .timeline a{
+                display: block;/*因為超連結本身不是一個block他不能設定寬跟高*/
+                text-decoration: none;
+                background-color: #fff;
+                border:1px solid #aaa;
+                box-sizing: border-box;
+                padding:20px;
+                border-radius:10px;
+                box-shadow: 3px 3px 5px #888;
+            }
+            .timeline a:hover{
+                background-color: #6fa5f6;
+            }
+            .timeline a:hover h2,
+            .timeline a:hover p{
+                color:#fff;
+            }  
+            .timeline h2{
+                color: #333;
+                font-weight: 700;
+            }
+            .timeline p{
+                color: #666;
+                font-weight: 100;
+            }
+            .timeline h2::after{
+                content: '';
+                position: absolute;
+                top:0;
+                bottom: 0;
+                margin: auto;
+                width: 100px;
+                height: 1px;
+                background-color: #aaa;
+            }
+            .timeline li:nth-child(odd) h2::after{
+                right:0;
+            }
+            .timeline li:nth-child(even) h2::after{
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>金魚都懂的網頁怎麼切</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde labore possimus tempore exercitationem, amet asperiores aspernatur consequatur enim corporis dicta!</p>
+            <ul class="timeline">
+                <li>
+                    <a href="#">
+                        <h2>圖文滿版</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>人物介紹卡片</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>超通用模式版面</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>網頁頁偽板塊</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>圖文滿版</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>互動圖文卡片</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>交錯漂浮版</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>變化導覽列</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores dolores consequuntur temporibus omnis incidunt!</p>
+                    </a>
+                </li>
+            </ul>
+           
+
+            </a>
+        </div>
+        
+    </body>
+</html>

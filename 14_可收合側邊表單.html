@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <!--步驟1:添加旁邊小黑拉塊
+            步驟2:讓他可以收回去
+            步驟3:添加要控制他的寫法-->
+        <link rel="stylesheet" 
+        href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            /*讓整個畫面作滿版的高*/
+            html, body{
+                height: 100%;
+            }
+            body{
+                background-color: #546377;
+            }
+            .side-menu{
+                /*為了label*/
+                position: relative;
+                background: linear-gradient(0deg, #3381b0, #c2196c);
+                width: 300px;
+                height: 100%;
+                /*讓上面有一點距離然後不要讓卷軸出現*/
+                padding: 50px 0;
+                box-sizing: border-box;
+                box-shadow: 10px 0px 10px hsla(240, 40%, 20%, .4);
+                transform: translateX(-100%);
+                transition: .3s;
+
+            }
+            .side-menu form{
+                display: flex;
+                /*表單和下面的距離 margin bottom*/
+                margin: 0px 10px 50px;
+                border-radius: 100px;
+                border: 1px solid rgb(255,255,255,.4);
+            }
+            .side-menu form input{
+                border: none;
+                padding: 5px 10px;
+                width: 230px;
+                color: white;
+                background-color: transparent;
+            }
+            .side-menu form button{
+                border: none;
+                padding: 5px 10px;
+                width: 50px;
+                color: rgb(255,255,255,.4);
+                background-color: transparent;
+            }
+            .side-menu form input:focus,.side-menu form button:focus{
+                outline: none;
+            }
+
+            nav a{
+                display: flex;
+                margin: auto;
+                padding: 10px;
+                text-decoration: none;
+                color:#fff;
+                position: relative;
+            }
+            nav a +a::before{
+                content: '';
+                border-top: 1px solid rgb(255,255,255,.4);
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                top: 0;
+            }
+            nav a .fa{
+                margin-right: -1em;
+                transform: scale(0);
+                transition:.3s;
+            }
+
+            nav a:hover .fa{
+                margin-right: 0em;
+                transform: scale(1);
+                transition:.3s;
+            }
+            .side-menu label{
+                /*為了要訂在sidemenu 旁邊位置要設定relative*/
+                color: white;
+                background-color:paleturquoise;
+                width: 40px;
+                height: 80px;
+                position: absolute;
+                margin: auto;
+                right: -40px;
+                top: 0;
+                bottom: 0;
+                text-align: center;
+                /*單行文字垂直居中方法*/
+                line-height: 80px;
+                font-size: 20px;
+                border-radius: 0px 10px 10px 0px;
+            }
+            #side-menu-switch:checked + .side-menu{
+                transform: translateX(0);
+            }
+            #side-menu-switch:checked + .side-menu label .fa{
+                /*讓飛鏢轉向*/
+                transform: scaleX(-1);
+            }
+            #side-menu-switch{
+                /*讓check消失*/
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+            }
+
+        </style>
+        <title>可收合側邊表單</title>
+    </head>
+    <body>
+        <input type="checkbox" name="" id="side-menu-switch">
+        <div class="side-menu">
+            <form>
+                <input type="search" placeholder="please enter sth...">
+                <button><i class="fa fa-search"></i>"</button>
+
+            </form>
+            <nav>
+                
+                <a href="#"> <i class="fa fa-camera-retro"></i>鐵人賽</a>
+
+                <a href="#"><i class="fa fa-anchor" aria-hidden="true"></i>吃人賽</a>
+                <a href="#"><i class="fa fa-bell" aria-hidden="true"></i>拉人賽</a>
+                <a href="#"><i class="fa fa-bomb" aria-hidden="true"></i>玩人賽</a>
+                <a href="#"><i class="fa fa-bug" aria-hidden="true"></i>喜人賽</a>
+            </nav>
+            <label for="side-menu-switch">
+                <i class="fa fa-angle-right"></i>
+            </label>
+        </div>
+        
+    </body>
+</html>

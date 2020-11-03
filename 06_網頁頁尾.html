@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>網頁頁尾板塊</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-family: "Fira Code";
+            }
+            .main-footer{
+                padding: 150px 0 0;
+                background: linear-gradient(-20deg, red, blue);
+            }
+            .container{
+                display: flex;
+                margin: auto;
+                width: 1200px;
+                
+                
+            }
+            .footer_item{
+                width: 0;
+                flex-grow: 1;
+                margin: 20px;
+                
+            }
+            .footer_item nav{
+                display: flex;
+                flex-direction: column;
+                
+
+            }
+
+            .footer_item a{
+                color: rgb(238, 236, 237);
+                text-decoration: none;
+                line-height: 2.0;
+                padding: 5px 0;
+            }
+            .footer_item h4{
+                color: white;
+                font-size: 24px;
+                border-bottom: 1px solid white;
+                margin-bottom: .5em;
+                padding-bottom: .5em;
+
+            }
+            .copyright{
+                background-color: chocolate;
+                color: cornsilk;
+                text-align: center;
+                margin: 100px 0 0;
+                padding: 10px 0px ;
+                width: 100%;
+            }
+            .footer_item{
+                display: flex;
+                flex-direction: column;
+            }
+            .footer_item form{
+                display: flex;
+                width: 100%;
+                margin: auto 0px;
+                
+                background-color: rgb(0, 0, 0);
+            }
+            input[type="text"],input[type="submit"]{
+                border: none;
+                padding: 5px 10px;
+            }
+            input[type="submit"]{
+                background-color: tomato;
+                color: white;
+            }
+            .footer-subs input[type="text"]{
+                /*為了要讓他滿版*/
+                width: 0;
+                flex-grow: 1;
+                
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer_item">
+                    <h4>關於課程</h4>
+                    <nav>
+                        <a href="#">課程目標</a>
+                        <a href="#">辦學裡念</a>
+                        <a href="#"><i class="add"></i>教課終止</a>
+                    </nav>
+                </div>
+                <div class="footer_item">
+                    <h4>教學裡念</h4>
+                    <nav>
+                        <a href="#">入門班</a>
+                        <a href="#">深刻了解</a>
+                        <a href="#">互動動畫</a>
+                        <a href="#">boostrap</a>
+                    </nav>
+                </div>
+                <div class="footer_item">
+                    <h4>服務項目</h4>
+                    <nav>
+                        <a href="#">網站建置顧問</a>
+                        <a href="#">網站設計顧問</a>
+                        <a href="#">網站規劃</a>
+                        <a href="#">教育訓練</a>
+    
+                    </nav>
+                </div>
+                <div class="footer_item footer-subs">
+                    <h4>訂閱電子報</h4>
+                    <form>
+                        <input type="text" name="" >
+                        <input type="submit" value="訂閱">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                Copyright &copy; 2019
+            </div>
+        </div>
+
+        
+     
+    </body>
+</html>

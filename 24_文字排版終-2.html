@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>24_文字排版-2</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            body{
+                background-color: #111;
+            }
+            .wrap{
+                margin: 100px 0;
+            }
+            .container{
+                width: 1200px;
+                
+                margin:auto;
+                text-align: center;
+                
+                
+            }
+            .container h1{
+                width: 100%;
+                
+                box-sizing: border-box;
+                font-size: 90px;
+                color: #a11;
+                margin-bottom: .5em;
+                
+                
+                
+                
+            }
+            .container h1::before,.container h1::after{
+                content:'';
+                display: block;
+                width: 2em;
+                height: 5px;
+                margin: auto;
+                background-color: #aaa;
+            }
+
+            .container .txt{
+                flex-shrink: 0;
+                box-sizing: border-box;
+                color: #fff;
+                
+            }
+            .container .txt p{
+                margin-bottom: 1em;
+            }
+            .container .txt p:first-child::first-letter{
+                font-size: 60px;
+                float: left;
+                padding-right: 10px;
+                color: #fff;
+            }
+
+        </style>
+        
+
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="container">
+                <h1>Chrislin is really awesome</h1>
+                <div class="txt">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quis officia. Odit magnam ex voluptates ea doloribus. Repudiandae tempore dicta eveniet ab quasi sit libero numquam excepturi illum, doloremque et?</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

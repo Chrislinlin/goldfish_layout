@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>23_文字排版-1</title>
+        <style>
+            
+            *{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .wrap{
+                margin: 100px 0;
+            }
+            .container{
+                width: 1200px;
+                position: relative;
+                margin: auto;
+            }
+            .container h2{
+                width: 400px;
+                box-sizing: border-box;
+                padding: 15px;
+                position:absolute;
+                top:0;
+                bottom: 0;
+                right:0;
+                left:0;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                font-size: 40px;
+                background-color: yellowgreen;
+            }
+            .container .txt{
+                
+                column-count: 2;
+                column-gap: 460px
+            }
+            .container .txt p{
+                
+                line-height: 1.3;
+                margin-bottom: 1em;
+            }
+            .container p:first-child:first-letter{
+                font-size: 40px;
+                float: left;
+                padding-right: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="container">
+                <h2>Chris will make money</h2>
+                <div class="txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime rerum eius porro consequatur rem nulla qui error quis nesciunt harum quas sit inventore repellendus at deserunt omnis, odit magni!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime rerum eius porro consequatur rem nulla qui error quis nesciunt harum quas sit inventore repellendus at deserunt omnis, odit magni!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum repellat rerum labore delectus. Vero tempora repudiandae modi doloremque deserunt perferendis incidunt, voluptatibus velit necessitatibus pariatur cumque quas magni aperiam porro?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum repellat rerum labore delectus. Vero tempora repudiandae modi doloremque deserunt perferendis incidunt, voluptatibus velit necessitatibus pariatur cumque quas magni aperiam porro?</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

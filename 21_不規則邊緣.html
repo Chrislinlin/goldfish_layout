@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .banner{
+                background: url(jieni.jpeg) center top/ cover;
+                
+                height: 600px;
+                
+            }
+            .section{
+                position: relative;
+            }
+            .section .container{
+                position: relative;
+                z-index: 2;
+                width: 1200px;
+                display: flex;
+                margin: auto;
+                padding: 100px 0;
+            }
+            .section .item{
+                width: 570px;
+                margin: 0 15px;
+
+            }
+            .section .item h2{
+                margin-bottom: 1.3em;
+            }
+            .section .item p{
+                line-height: 1.5em;
+                margin-bottom: 1.7em;
+            }
+            .section::after{
+                content: '';
+                width: 200px;
+                height: 200px;
+                background-color: #fff;
+                position: absolute;
+                display: block;
+                top:0;
+                left: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                box-shadow: 178px 0px 0px 30px #fff,
+                            327px 34px 0px 20px #fff, 
+                            480px 9px 0px 60px #fff, 
+                            690px 71px 0px 60px #fff, 
+                            880px 0px 0px 89px #fff,
+                            
+                            -178px 0px 0px 30px #fff,
+                            -327px 34px 0px 20px #fff, 
+                            -480px 9px 0px 60px #fff, 
+                            -690px 71px 0px 60px #fff, 
+                            -880px 0px 0px 89px #fff,
+                            -1100px 50px 0px 89px #fff,
+
+                            -178px -30px 0px 30px rgba(0, 0, 0, .5),
+                            -327px -34px 0px 20px rgba(0, 0, 0, .6), 
+                            -480px -9px 0px 60px rgba(0, 0, 0, .3), 
+                            -690px -71px 0px 60px rgba(0, 0, 0, .5), 
+                            -880px 0px 0px 89px  rgba(0, 0, 0, .5),
+                            -1100px -50px 0px 89px rgba(0, 0, 0, .7),
+
+                            327px -34px 0px 20px  rgba(0, 0, 0, .5), 
+                            480px -9px 0px 60px  rgba(0, 0, 0, .5), 
+                            690px -71px 0px 60px  rgba(0, 0, 0, .8), 
+                            880px 0px 0px 89px  rgba(0, 0, 0, .3);
+            }
+            .section::before{
+                content: '';
+                width: 100%;
+                height: 250px;
+                position:absolute;
+                background-color: #fff;
+                z-index: 1;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="banner"></div>
+        <div class="section">
+            <div class="container">
+                <div class="item">
+                <h2>標題一</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea recusandae non sit facilis facere atque beatae quae, quod nemo?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea recusandae non sit facilis facere atque beatae quae, quod nemo?</p>
+            </div>
+                <div class="item">
+                <h2>標題二</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea recusandae non sit facilis facere atque beatae quae, quod nemo?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea recusandae non sit facilis facere atque beatae quae, quod nemo?</p>
+            </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
